@@ -1,0 +1,1 @@
+export DATE=backup-$(date +%d%m%y%H%M%S) && sudo nixos-rebuild switch -I nixos-config=./.dotfiles/system/configuration.nix --upgrade-all |& nom && home-manager switch -f ./.dotfiles/users/cd/home.nix -b $DATE |& nom 
